@@ -1,0 +1,83 @@
+
+  <div class="w-full mb:5em">
+    <p class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-blue-800">Airline</p>
+    <form #myForm="ngForm" (ngSubmit)=" onSubmit()">
+      <div class="container">
+
+        <div>
+          <label>Name</label>
+          <input required [(ngModel)]="airline.name" name="name" type="text" #name="ngModel" />
+          <div class="error-message"  *ngIf="name.invalid && name.touched">name is a required field !</div>
+        </div>
+        <div>
+          <label>Rating</label>
+          <input required [(ngModel)]="airline.rating" name="rating" type="number" #rating="ngModel" />
+          <div class="error-message"  *ngIf="rating.invalid && rating.touched">Rating Number is a required field !</div>
+        </div>
+        <div>
+          <label>Date of Creation </label>
+          <input required [(ngModel)]="airline.dateofCrea" name="dateofCrea" type="date" #dateofCrea="ngModel" />
+          <div class="error-message" *ngIf="dateofCrea.invalid && dateofCrea.touched"> Date of Creation is a required field !</div>
+        </div>
+        <div>
+            <label>Pays</label>
+            <input required [(ngModel)]="airline.pays" name="pays" type="text" #pays="ngModel" />
+            <div class="error-message"  *ngIf="pays.invalid && pays.touched">Pays  is a required field !</div>
+          </div>
+
+          <div>
+            <div >
+              <label >Image</label>
+                <input  required [(ngModel)]="airline.imageUrl" type="file" name="imageUrl" #imageUrl="ngModel" >
+        
+            </div>
+            
+        </div>
+       
+       
+        
+        
+        <div>
+          <button type="button" [mat-dialog-close]="false">Cancel</button>
+  
+          <button type="submit" [disabled]="myForm.invalid" [mat-dialog-close]="false" >Add Airline</button>
+  
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

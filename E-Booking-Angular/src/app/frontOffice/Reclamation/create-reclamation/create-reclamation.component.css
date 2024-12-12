@@ -1,0 +1,60 @@
+/* styles.css */
+
+  
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #a8a2a2 ;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a237e;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="date"],
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1em;
+    border: 1px solid #0b0b0b;
+    border-radius: 4px;
+  }
+  
+  input[type="date"]:focus,
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #1a237e;
+  }
+  
+  .error-message {
+    color: rgb(177, 20, 20);
+    margin-top: 0.5rem;
+  }
+  
+
+
+  button[type="submit"] {
+    padding: 0.5em 2em  ; 
+    font-size: 1.2em;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 250px;
+  }
+ 
+  
+  button[type="submit"]:hover {
+    background-color: #005faa;
+  
+  }

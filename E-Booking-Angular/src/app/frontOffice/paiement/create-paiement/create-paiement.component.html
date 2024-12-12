@@ -1,0 +1,85 @@
+<!--
+<form>
+    <input type="text" placeholder="Credit Card #" name="cardNumber">
+    <input type="text" placeholder="Expiration Month" name="expMonth">
+    <input type="text" placeholder="Expiration Year" name="expYear">
+    <input type="text" placeholder="CVC" name="cvc">
+    <button>check out</button>
+  </form>
+  
+-->
+
+<section  class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;   bg-gray-300 bg-blend-multiply ">
+
+    <div class="table-responsive text-nowrap" style="max-height:100% px ; max-width: 100%; border: #0f0505;">
+        <table class="table"   >
+      <div class="w-full mb:5em" >
+        <p class="font-bold text-3xl md:text-4xl lg:text-auto font-heading text-blue-800  text-center  " > Espace Paiement</p>
+        <form  #myForm="ngForm" >
+          <div class="container">
+            <div>
+    
+                <label> Credit Card</label>
+                <input placeholder="Credit Card" type="number" name="Credit Card" />
+              </div>
+            
+            <div>
+              <label>Expiration Month</label>
+              <input placeholder="Expiration Month" type="month"  name="Expiration Month"/>
+            </div>
+           
+            
+            <div>
+              <label>Expiration Year </label>
+              <input placeholder="Expiration Year" type="year"  name="Expiration Year " />
+            </div>
+
+            <div>
+                <label>CVC </label>
+                <input placeholder="CVC" type="number"  />
+              </div>
+            
+            <div>
+      
+              <button type="submit" [disabled]="myForm.invalid">Check Out</button>
+      
+            </div>
+          </div>
+        </form>
+      </div>
+      </table>
+       </div>
+      
+    </section>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

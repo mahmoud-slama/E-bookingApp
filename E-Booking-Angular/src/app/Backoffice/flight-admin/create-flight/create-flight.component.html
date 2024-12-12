@@ -1,0 +1,88 @@
+
+<div class="w-full mb:5em">
+  <p class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-blue-800">Flight</p>
+  <form #myForm="ngForm" (ngSubmit)="addFlight()">
+    <div class="container">
+      <div>
+        <label>Airline</label>
+        <input required [(ngModel)]="flight.airline" name="Airline" type="text" #Airline="ngModel" />
+        <div class="error-message" *ngIf="Airline.invalid && Airline.touched">Airline is a required field !</div>
+      </div>
+      <div>
+        <label>Flight Number</label>
+        <input required [(ngModel)]="flight.flightNumber" name="flightnumbre" type="number" #flightnumbre="ngModel" />
+        <div class="error-message" *ngIf="flightnumbre.invalid && flightnumbre.touched">Flight Number is a required field !</div>
+      </div>
+      <div>
+        <label>Departure Location</label>
+        <input required [(ngModel)]="flight.departureLoc" name="departureloc" type="text" #departureloc="ngModel" />
+        <div class="error-message" *ngIf="departureloc.invalid && departureloc.touched">Departure Location is a required field !</div>
+      </div>
+      <div>
+        <label>Arrival Location</label>
+        <input required [(ngModel)]="flight.arrivalLoc" name="arrivaleloc" type="text" #arrivaleloc="ngModel" />
+        <div class="error-message" *ngIf="arrivaleloc.invalid && arrivaleloc.touched">Arrival Location is a required field !</div>
+      </div>
+      <div>
+        <label>Departure Date</label>
+        <input  required [(ngModel)]="flight.departureDate" name="departureDate" type="date" #departureDate="ngModel" />
+        <div class="error-message" *ngIf="departureDate.invalid && departureDate.touched">Departure Date is a required field !</div>
+      </div>
+      <div>
+        <label>Arrival Date</label>
+        <input required [(ngModel)]="flight.arrivalDate" name="arrivaleDate" type="date" #arrivaleDate="ngModel" />
+        <div class="error-message" *ngIf="arrivaleDate.invalid && arrivaleDate.touched">Arrival Date is a required field !</div>
+      </div>
+      <div>
+        <label>Flight Status</label>
+        <input required [(ngModel)]="flight.flightStatus" name="FlightStatus" type="text" #FlightStatus="ngModel" />
+        <div class="error-message" *ngIf="FlightStatus.invalid && FlightStatus.touched">Flight Status is a required field !</div>
+      </div>
+      <div>
+        <label>Flight Cost</label>
+        <input required [(ngModel)]="flight.flightCost" name="FlightCost" type="number" #FlightCost="ngModel" />
+        <div class="error-message" *ngIf="FlightCost.invalid && FlightCost.touched">Flight Cost is a required field !</div>
+      </div>
+      <div>
+        <button type="button" [mat-dialog-close]="false">Cancel</button>
+
+        <button type="submit" [disabled]="myForm.invalid">Add Flight</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

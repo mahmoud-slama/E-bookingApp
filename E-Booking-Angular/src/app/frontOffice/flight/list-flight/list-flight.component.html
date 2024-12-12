@@ -1,0 +1,46 @@
+<!-- component -->
+<section  class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;  bg-gray-300 bg-blend-multiply" >
+    <div class="text-center pb-12">
+        
+        <h1 style="font-size: 60px; "  class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+            Check out our latest Flights offers
+        </h1>
+       
+ <!-- add fliter par  critere departure loc and arrivil loc and date debut  -->
+<div style="display: flex; flex-direction: column; max-width: 20%; margin-right: 0;">
+    
+<input style="margin-bottom: 10px;" type="date" Departure Date> 
+<input style="margin-bottom: 10px;"  type=date> 
+<input  style="margin-bottom: 10px;"   placeholder="Departure Location" type="text"> 
+<input style="margin-bottom: 10px;"  placeholder="Arrival Location"   type="text"> 
+<button class="btn btn-primary">Flight Filter</button>
+
+</div>
+
+
+      </div>
+    
+        
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10"  >
+        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center" *ngFor="let flight of flights">
+            <div>
+                <img class="object-center object-cover h-auto w-auto" src="\assets\R.jpg"  alt="flight photo">
+            </div>
+            <div class="text-center py-8 sm:py-6">
+                <p class="text-xl text-gray-700 font-bold mb-2"> Airline :  {{flight.airline}} </p>
+                <p class="text-base text-gray-700 font-normal">departure Location : {{flight.departureLoc}} </p>
+                <p class="text-base text-gray-700 font-normal">arrival Location   : {{flight.arrivalLoc}} </p>
+                <p class="text-base text-gray-700 font-normal">departureDate : {{flight.departureDate}}</p>
+                <p class="text-base text-gray-700 font-normal">Arrival Date   : {{flight.arrivalDate}} </p>
+                <p class="text-base text-gray-700 font-normal">Flight Status: {{flight.flightStatus}} </p>
+                <p class="text-base text-gray-700 font-normal">Flight Number: {{flight.flightNumber}} </p>
+                <h2  class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl  inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg bg-green-500  focus:ring-4">Flight Cost: {{flight.flightCost}} $ </h2>
+
+            </div>
+            <button class="btn btn-primary"  style="margin-left: 10px; margin-bottom: 20px; height: 50px;  width: 200px;" (click)="redirectToCreatePaiement()"  >Book Now  </button>
+        </div>
+        <!-- add more flight offer cards here -->
+
+
+    </div>
+</section>

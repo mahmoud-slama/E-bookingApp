@@ -1,0 +1,42 @@
+
+<div class="w-full mb:5em">
+    <p class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-blue-800">Offer</p>
+    <form #myForm="ngForm" (ngSubmit)="addOffer()">
+      <div class="container">
+        <div>
+          <label>Name</label>
+          <input required [(ngModel)]="offer.name" name="name" type="text" #name="ngModel" />
+          <div class="error-message" *ngIf="name.invalid && name.touched">Airline is a required field !</div>
+        </div>
+        <div>
+          <label>Number Of Days</label>
+          <input required [(ngModel)]="offer.numberOfDays" name="numberOfDays" type="number" #numberOfDays="ngModel" />
+          <div class="error-message" *ngIf="numberOfDays.invalid && numberOfDays.touched">Flight Number is a required field !</div>
+        </div>
+        <div>
+          <label>Cost</label>
+          <input required [(ngModel)]="offer.cost" name="cost" type="number" #cost="ngModel" />
+          <div class="error-message" *ngIf="cost.invalid && cost.touched">Cost is a required field !</div>
+        </div>
+        <div>
+          <label>Number Of Person</label>
+          <input required [(ngModel)]="offer.numberOfPerson" name="numberOfPerson" type="number" #numberOfPerson="ngModel" />
+          <div class="error-message" *ngIf="numberOfPerson.invalid && numberOfPerson.touched">number Of Person is a required field !</div>
+        </div>
+        <div>
+          <label>Type Offer</label>
+          <input  required [(ngModel)]="offer.typeOffer" name="typeOffer" type="text" #typeOffer="ngModel" />
+          <div class="error-message" *ngIf="typeOffer.invalid && typeOffer.touched">type Offer is a required field !</div>
+        </div>
+        
+        <div>
+          <button type="button" [mat-dialog-close]="false">Cancel</button>
+  
+          <button type="submit" [disabled]="myForm.invalid">Add Offer</button>
+  
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  

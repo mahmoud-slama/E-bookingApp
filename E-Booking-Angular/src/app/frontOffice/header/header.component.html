@@ -1,0 +1,58 @@
+  
+   <!-- component -->
+<nav  id="header" class="w-full text-white bg-gradient-to-r from-cyan-800 to-blue-500 body-font">
+   <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
+      
+      
+      <div  style="padding-bottom:500 em ;"  class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+         <nav>
+            <ul class="md:flex items-center justify-between  text-white pt-4 md:pt-0 text-xl">
+               <li><a style="cursor: pointer;"  class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"  (click)="redirectToHome()" >Home</a></li>
+               <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectToreclamtion()"  >Reclamation</a></li>
+               <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"  (click)="redirectTolistAriline()"  >Airline</a></li>
+ 
+               <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectTolisthotel()" >Hotel</a></li>
+               <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"  (click)="redirectadmin()" >GO Admin</a></li>
+ 
+ 
+           </ul>
+         </nav>
+      </div>
+      
+      <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+         <div class="auth flex items-center w-full md:w-full">
+            <button class="bg-transparent text-white  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-black"  (click)="redirectToAuthenticate()"  >Sign in</button>
+            <button class="bg-transparent text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-" (click)=" redirectToRegister()" >Signup</button>
+         </div>
+      </div>
+   </div>
+ </nav>
+ 
+ 
+   
+   
+   
+   
+   
+   
+  <!-- 
+   <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+      <nav>
+         <ul class="md:flex items-center justify-between  text-white pt-4 md:pt-0 text-xl">
+            <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectToHome()" >Home</a></li>
+            <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectToreclamtion()" >Reclamation</a></li>
+            <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"(click)="redirectTolistAriline()"  >Airline</a></li>
+            <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectTolisthotel()" >Hotel</a></li>
+            <li><a style="cursor: pointer;" class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" (click)="redirectadmin()" >Go Admin</a></li>
+
+        </ul>
+      </nav>
+   </div>
+   
+   <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+      <div class="auth flex items-center w-full md:w-full">
+         <button class="bg-transparent text-white  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-black"  (click)="redirectToAuthenticate()"  >Sign in</button>
+         <button class="bg-transparent text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-" (click)=" redirectToRegister()" >Signup</button>
+      </div>
+   </div>
+--> 

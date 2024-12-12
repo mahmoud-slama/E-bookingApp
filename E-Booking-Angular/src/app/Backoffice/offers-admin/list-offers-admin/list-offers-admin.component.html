@@ -1,0 +1,113 @@
+<section class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;  bg-gray-300 bg-blend-multiply">
+
+    <div   class="layout-wrapper layout-content-navbar">
+        <div style="height:70% ; margin-right: 35%;" class="layout-container">
+          <div   class="layout-page">
+            <div class="content-wrapper" style="font-size: medium; padding-left: 60px;">
+              <div class="container-xxl flex-grow-1 container-p-y">
+                <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Show offers</h4>
+          
+              
+    
+                
+         <div style="margin-left: auto"  class="input-group mb-3">
+                  <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search by id"
+                  [(ngModel)]="id"  >
+         <div  class="input-group-append">
+    
+           <button
+             class="btn btn-outline-secondary"
+             (click)="SearchOffer(id)"
+           >
+             Search
+           </button>
+         </div>
+       </div>
+    
+     
+    
+                <div class="card">
+                  <div id="filterPromotion">
+                    <h5 class="card-header" >Table Basic</h5>
+                    
+                    <button mat-raised-button color="primary" style="margin-left: 20px ; height: 50px; " (click)="openAddEditEmpForm()" >Add  offer</button>
+    
+    
+                  </div>
+                  <div class="table-responsive text-nowrap" style="max-height:100% px ; max-width: 100%;">
+                    <table class="table"   >
+                      <thead>
+                      <tr>
+                        <th>
+                          <span style="margin-right: 30px;">ID</span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('nom,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('nom,desc')"></span>
+                        
+                        </th>
+                        <th>
+                          <span style="margin-right: 30px;">Name</span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('nom,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info" (click)="onSortChange('nom,desc')"></span>
+                        </th>
+                        <th>
+                          <span style="margin-right: 50px;">Number Of Days</span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('pourcentage,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info"(click)="onSortChange('pourcentage,desc')"></span></th>
+                        <th>
+                          <span style="margin-right: 10px;">Cost</span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('PromotionDate,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info"(click)="onSortChange('PromotionDate,desc')"></span></th>
+                        <th>
+                          <span style="margin-right: 30px;">Number Of Person</span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('duree,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info"(click)="onSortChange('duree,desc')"></span></th>
+                        <th>
+                          <span style="margin-right: 30px;">Type Offer </span>
+                          <span class="tf-icons bx bx-up-arrow-alt btn-outline-primary" (click)="onSortChange('description,asc')"></span>
+                          <span class="tf-icons bx bx-down-arrow-alt btn-outline-info"(click)="onSortChange('description,desc')"></span></th>
+      
+                        </tr>
+    
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                      <tr *ngFor="let offer of offers ">
+                        <td>{{offer.id}}</td>
+                        <td>{{offer.name}}</td>
+                        <td>{{offer.numberOfDays}}</td>
+                        <td>{{offer.cost}}</td>
+                        <td>{{offer.numberOfPerson}}</td>
+                        <td>{{offer.typeOffer}}</td>
+                        
+    
+                        <td>
+                          <button  (click)="deleteOffer(offer.id)"   class="btn btn-danger"  >Delete</button>
+      
+                        </td>
+                        <td>
+                          <button    class="btn btn-warning"  >Update</button>
+      
+                        </td>
+                        
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </div>
+      
+              </div>
+              <div class="row justify-content-center">
+               
+              </div>
+              
+            </div>
+            <div class="layout-overlay layout-menu-toggle"></div>
+          </div>
+        </div>
+      </div>
+      
+    
+    </section>

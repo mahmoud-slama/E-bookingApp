@@ -1,0 +1,72 @@
+<section  class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;   bg-gray-300 bg-blend-multiply ">
+
+<div class="table-responsive text-nowrap" style="max-height:100% px ; max-width: 100%; border: #0f0505;">
+    <table class="table"   >
+  <div class="w-full mb:5em" >
+    <p class="font-bold text-3xl md:text-4xl lg:text-auto font-heading text-blue-800  text-center  " > Espace Reclamation</p>
+    <form  #myForm="ngForm" (ngSubmit)="addReclamation()">
+      <div class="container">
+        <div>
+
+            <label> Date Reclamation</label>
+            <input  required [(ngModel)]="reclamation.daterec" name="daterec" type="date" #daterec="ngModel" />
+            <div class="error-message" *ngIf="daterec.invalid && daterec.touched">Date Reclamation is a required field</div>
+          </div>
+        
+        <div>
+          <label>Description </label>
+          <input required [(ngModel)]="reclamation.description" name="description" type="text" #description="ngModel" />
+          <div class="error-message" *ngIf="description.invalid && description.touched">Description is a required field</div>
+        </div>
+       
+        
+        <div>
+          <label>Motif </label>
+          <input required [(ngModel)]="reclamation.motif" name="motif" type="text" #motif="ngModel" />
+          <div class="error-message" *ngIf="motif.invalid && motif.touched">motif  is a required field</div>
+        </div>
+        
+        <div>
+  
+          <button type="submit" [disabled]="myForm.invalid">Send Reclamation</button>
+  
+        </div>
+      </div>
+    </form>
+  </div>
+  </table>
+   </div>
+  
+</section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,51 @@
+
+<div class="w-full mb-5em">
+    <p class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-blue-800">Hotel</p>
+    <form #myForm="ngForm" (ngSubmit)="addHotel()">
+      <div class="container">
+        <div>
+          <label>Name</label>
+          <input required [(ngModel)]="hotel.name " name="name" type="text" #name="ngModel" />
+          <div *ngIf="name.invalid && name.touched">name is a required field</div>
+        </div>
+        <div>
+          <label>Location</label>
+          <input required [(ngModel)]="hotel.location" name="location" type="text" #location="ngModel" />
+          <div *ngIf="location.invalid && location.touched">location is a required field</div>
+        </div>
+        <div>
+          <label>Rating</label>
+          <input required [(ngModel)]="hotel.rating" name="rating" type="number" #rating="ngModel" />
+          <div *ngIf="rating.invalid && rating.touched">rating  is a required field</div>
+        </div>
+        <div>
+          <label>Number of Room</label>
+          <input required [(ngModel)]="hotel.numberofRoom" name="numberofRoom" type="number" #numberofRoom="ngModel" />
+          <div *ngIf="numberofRoom.invalid && numberofRoom.touched">number of Room  is a required field</div>
+        </div>
+        <div>
+          <label>Fondation Date</label>
+          <input required [(ngModel)]="hotel.fondationDate" name="fondationDate" type="date" #fondationDate="ngModel" />
+          <div *ngIf="fondationDate.invalid && fondationDate.touched">fondation Date  is a required field</div>
+        </div>
+        
+        <div>
+          <div >
+            <label >Image</label>
+              <input type="file" >
+      
+          </div>
+          
+      </div>
+        
+          
+        <div>
+            <button type="button" [mat-dialog-close]="false">Cancel</button>
+
+          <button type="submit" [disabled]="myForm.invalid">Add Hotel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+

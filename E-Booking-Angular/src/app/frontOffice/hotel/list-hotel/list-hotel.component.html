@@ -1,0 +1,40 @@
+<!-- component -->
+<section class="max-w-auto mx-auto px-4 sm:px-6 lg:px-4 py-12 ;  bg-gray-300 bg-blend-multiply" >
+    <div class="text-center pb-12">
+        
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+            Check out our latest Hotel offers
+        </h1>
+        
+        <div>
+            <form   class="form-inline my-2 my-lg-0">
+                <input style="margin-top:20px ;"  class="form-control mr-sm-2" type="search" placeholder="Search by Name" aria-label="Search">
+                <button  class="btn btn-outline-success my-2 my-sm-0" >Search</button>
+              </form>
+        </div>
+
+    </div>
+    
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10" >
+        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center" *ngFor="let hotel of hotels">
+            <div>
+                <img class="object-center object-cover h-auto w-full" src= "\assets\logo.gif"  alt="flight photo">
+            </div>
+            <div class="text-center py-8 sm:py-6">
+                <p class="text-xl text-gray-700 font-bold mb-2">Name : {{hotel.name}} </p>
+                <p class="text-base text-gray-700 font-normal">Location :{{hotel.location}} </p>
+                <p class="text-base text-gray-700 font-normal">Rating :{{hotel.rating}} </p>
+                <p class="text-base text-gray-700 font-normal">Number of Rooms :{{hotel.numberofRoom}} </p>
+                <p class="text-base text-gray-700 font-normal">Fondation Date :{{hotel.fondationDate}} </p>
+
+
+            </div>
+
+            <button  (click)="redirectToOffers()"  class="btn btn-primary"  style="margin-left: 10px; margin-bottom: 20px; height: 50px;  width: 200px;"  >Show offers   </button>
+
+        </div>
+
+        <!-- add more flight offer cards here -->
+    </div>
+</section>
